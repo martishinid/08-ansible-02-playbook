@@ -1,0 +1,9 @@
+version: '3'
+services:
+  server:
+    image: robertdebock/docker-centos-openssh
+    build: .
+    volumes:
+      - /home/user/.ssh:/root/.ssh/
+    ports:
+      - "2222:22"
